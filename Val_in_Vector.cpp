@@ -29,3 +29,25 @@ int main()
 
   return 0;
 }
+
+int main()
+{
+  const int NUM_GUESSES = 3;
+  vector<int> userGuesses(NUM_GUESSES);
+  unsigned int i;
+
+  /* Your solution goes here  */
+  for (i = 0; i < userGuesses.size(); ++i)
+  {
+    int num;
+    cin >> num;
+    userGuesses.at(i) = num;
+  }
+
+  for (i = 0; i < userGuesses.size(); ++i)
+  {
+    cout << userGuesses.at(i) << " ";
+  }
+
+  return 0;
+}
