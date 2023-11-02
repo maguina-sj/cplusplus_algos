@@ -4,7 +4,7 @@ using namespace std;
 
 // Assign numMatches with the number of elements in userValues that equal matchValue. userValues has NUM_VALS elements. Ex: If userValues is {2, 2, 1, 2} and matchValue is 2 , then numMatches should be 3.
 
-Your code will be tested with the following values : *matchValue : 2, userValues : {2, 2, 1, 2}(as in the example program above)*matchValue : 0, userValues : {0, 0, 0, 0} * matchValue : 50, userValues: { 10, 20, 30, 40 }
+// Your code will be tested with the following values : *matchValue : 2, userValues : {2, 2, 1, 2}(as in the example program above)*matchValue : 0, userValues : {0, 0, 0, 0} * matchValue : 50, userValues: { 10, 20, 30, 40 }
 int main()
 {
   const int NUM_VALS = 4;
@@ -78,5 +78,45 @@ int main()
   /* Your solution goes here  */
 
   cout << "sumExtra: " << sumExtra << endl;
+  return 0;
+}
+
+// Write a for loop to print all NUM_VALS elements of vector hourlyTemp. Separate elements with a comma and space. Ex: If hourlyTemp = {90, 92, 94, 95}, print:
+//  90, 92, 94, 95
+//  Your code's output should end with the last element, without a subsequent comma, space, or newline.
+int main()
+{
+  const int NUM_VALS = 4;
+  unsigned int i;
+  vector<int> hourlyTemp(NUM_VALS);
+
+  for (i = 0; i < hourlyTemp.size(); ++i)
+  {
+    cin >> hourlyTemp.at(i);
+  }
+
+  /* Your solution goes here  */
+  for (i = 0; i < hourlyTemp.size(); ++i)
+  {
+    cout << hourlyTemp.at(i);
+    if (i < hourlyTemp.size() - 1)
+    {
+      cout << ", ";
+    }
+  }
+  // for (i = 0; i < hourlyTemp.size(); i++)
+  // {
+  //   if (hourlyTemp.at(i) == (hourlyTemp.size() - 1))
+  //   {
+  //     cout << hourlyTemp.at(i);
+  //   }
+  //   else
+  //   {
+  //     cout << hourlyTemp.at(i) << ", ";
+  //   }
+  // }
+
+  cout << endl;
+
   return 0;
 }
